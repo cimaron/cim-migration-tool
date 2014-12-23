@@ -78,5 +78,10 @@ abstract class Import {
 
 	abstract protected function getTotalSteps();
 
+	protected function print_r($var) {
+
+		echo '<div style="white-space: pre; font-family: monospace; max-height: 300px; overflow: auto;">' . htmlentities(print_r($var, true)) . '</div>';
+	
+	}
 }
 

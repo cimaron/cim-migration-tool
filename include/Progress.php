@@ -144,7 +144,7 @@ class Progress {
 			$percent = $percent * 100;
 			$perc = round($percent, 1) . "%";
 
-			$out .= "<div>";
+			$out .= '<div style="margin-top: 20px;">';
 			$out .= "<h4>$v</h4><br />\n";
 			$out .= '<div class="progress ' . (($v == $step && $percent != 100) ? 'active' : '') . '"><div class="progress-bar" style="width: ' . $percent . '%;">' . $perc . '</div></div>';
 
@@ -167,16 +167,16 @@ class Progress {
 		$text = "";
 
 		if (file_exists($file)) {
-	
+
 			$text = @file_get_contents($file);
 
 			if (@filemtime($file) < time() - 10) {
-				$text .= '<div class="alert alert-info">Done.</div>';
+				$text = '<div class="alert alert-warning" style="margin-top: 20px;">Stopped.</div>' . $text;
 			}
-		}	
+		}
 
 		if (!$text) {
-			$text = '<div class="alert alert-warning">No data.</div>';
+			$text = '<div class="alert alert-warning" style="margin-top: 20px;">No data.</div>';
 		}
 
 		return $text;

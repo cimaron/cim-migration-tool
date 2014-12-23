@@ -52,7 +52,7 @@ class Database {
 
 		if (!$this->last) {
 			$this->errors[] = array('error' => mysql_error($this->res), 'sql' => $q);
-			$fh = fopen(dirname(__FILE__) . '/../data/errorlog.txt', 'a');
+			$fh = fopen(dirname(__FILE__) . '/../var/log/errorlog.txt', 'a');
 			fwrite($fh, mysql_error($this->res) . "\n" . $q . "\n===========\n");
 			fclose($fh);
 		}

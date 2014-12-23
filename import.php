@@ -68,6 +68,8 @@ foreach ($imports as $import) {
 	}
 }
 
+$result['message'][] = "Complete.";
+
 header('Content-Type: application/json');
 echo json_encode($result);
 

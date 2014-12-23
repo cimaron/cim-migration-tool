@@ -66,8 +66,8 @@ usort($imports, 'dosort');
 		</table>
 
 		<div style="margin-top: 20px;" class="row-fluid">
-			<input type="button" class="btn btn-primary btn-block" value="Start Import" onClick="startImport();" />
-			<input type="button" class="btn btn-block" id="listen" value="Listen" onClick="listen();" />
+			<input type="button" class="btn btn-success btn-block" value="Start Import" onClick="startImport();" />
+			<input type="button" class="btn btn-default btn-block" id="listen" value="Listen" onClick="listen();" />
 		</div>
 	
 	</div>

@@ -34,6 +34,12 @@
 			
 			success : function(data) {
 				
+				if (typeof data == "string") {
+					data = {
+						error : [data]	
+					};
+				}
+				
 				var out = "";
 				
 				if (data.error && data.error.length) {
