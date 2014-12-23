@@ -1,0 +1,12 @@
+<?php
+
+if (file_exists(dirname(__FILE__) . '/../configuration.php')) {
+	include_once dirname(__FILE__) . '/../configuration.php';
+	$config = new JConfig();
+}
+
+//Import login credentials. Change, or add to as necessary
+$credentials = array(
+	'user' => 'password',
+);
+
